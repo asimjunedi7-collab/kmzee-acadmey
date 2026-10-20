@@ -1,0 +1,6 @@
+node_modules/
+.claude/
+.kilo/
+*.py
+test.html
+validate.js

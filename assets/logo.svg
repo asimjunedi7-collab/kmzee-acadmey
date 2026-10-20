@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="KMZee IAMAcademy">
+  <defs>
+    <linearGradient id="cyanGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4AD8E8"/>
+      <stop offset="100%" stop-color="#3DC8DA"/>
+    </linearGradient>
+    <linearGradient id="peachGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBB088"/>
+      <stop offset="100%" stop-color="#F99A6A"/>
+    </linearGradient>
+    <linearGradient id="cyanArmGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#47D4E2"/>
+      <stop offset="100%" stop-color="#3CC6D8"/>
+    </linearGradient>
+    <linearGradient id="peachArmGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAA778"/>
+      <stop offset="100%" stop-color="#F99562"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Vertical cyan pillar -->
+  <rect x="47" y="5" width="16" height="118" rx="2" fill="url(#cyanGrad)"/>
+
+  <!-- Upper-right cyan arm (K top stroke) -->
+  <path d="M63 64 L100 18" stroke="url(#cyanArmGrad)" stroke-width="16" stroke-linecap="round" fill="none"/>
+
+  <!-- Lower-right peach/orange arm (K bottom stroke) -->
+  <path d="M63 64 L104 118" stroke="url(#peachArmGrad)" stroke-width="16" stroke-linecap="round" fill="none"/>
+
+  <!-- Pen nib / diamond on the left -->
+  <path d="M35 94 L22 68 Q20.5 61 33 55 Q45.5 61 44 68 Z" fill="url(#peachGrad)"/>
+  <!-- Pen nib center line -->
+  <line x1="33" y1="62" x2="33" y2="88" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+  <!-- Pen nib dot -->
+  <circle cx="33" cy="60" r="3.2" fill="#fff" opacity="0.9"/>
+</svg>

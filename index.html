@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KMZee IAMAcademy — Your skills define your path</title>
+  <meta name="description" content="KMZee IAMAcademy is an online academy built around your skills, not outdated prerequisites. Customised learning paths, on-demand 1:1 live sessions, pay as you go.">
+  <meta name="theme-color" content="#e6fffe">
+  <meta property="og:title" content="KMZee IAMAcademy — Your skills define your path">
+  <meta property="og:description" content="Customised learning paths, on-demand 1:1 live sessions with a real coach, pay only for the time you book.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Montserrat:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body id="top">
+
+<!-- ───────────── SVG sprite ───────────── -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="logo" viewBox="0 0 128 128">
+      <defs>
+        <linearGradient id="lg-cyan" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#4AD8E8"/>
+          <stop offset="100%" stop-color="#3DC8DA"/>
+        </linearGradient>
+        <linearGradient id="lg-peach" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FBB088"/>
+          <stop offset="100%" stop-color="#F99A6A"/>
+        </linearGradient>
+        <linearGradient id="lg-cyanArm" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0%" stop-color="#47D4E2"/>
+          <stop offset="100%" stop-color="#3CC6D8"/>
+        </linearGradient>
+        <linearGradient id="lg-peachArm" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#FAA778"/>
+          <stop offset="100%" stop-color="#F99562"/>
+        </linearGradient>
+      </defs>
+      <rect x="47" y="5" width="16" height="118" rx="2" fill="url(#lg-cyan)"/>
+      <path d="M63 64 L100 18" stroke="url(#lg-cyanArm)" stroke-width="16" stroke-linecap="round" fill="none"/>
+      <path d="M63 64 L104 118" stroke="url(#lg-peachArm)" stroke-width="16" stroke-linecap="round" fill="none"/>
+      <path d="M35 94 L22 68 Q20.5 61 33 55 Q45.5 61 44 68 Z" fill="url(#lg-peach)"/>
+      <line x1="33" y1="62" x2="33" y2="88" stroke="#fff" stroke-width="2.4" stroke-linecap="round" opacity="0.85"/>
+      <circle cx="33" cy="60" r="3.2" fill="#fff" opacity="0.9"/>
+    </symbol>
+
+    <!-- Illustrative two-tone icons: tone 1 = currentColor, tone 2 = --c2 -->
+    <symbol id="i-code" viewBox="0 0 48 48"><path d="M18 14 6 24l12 10M30 14l12 10-12 10" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m27.5 9-7 30" fill="none" style="stroke:var(--c2,#faa67a)" stroke-width="4.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 48 48"><path fill="currentColor" d="M24 4C16.300 4 10 10 10 17.600c0 4.300 2 7 4.200 9.600 1.200 1.500 1.800 2.800 1.800 4.600V33h16v-1.200c0-1.800.6-3.100 1.800-4.600C34 24.600 38 21.900 38 17.600 38 10 31.700 4 24 4z"/><path style="fill:var(--c2,#faa67a)" d="M17 36h14v2.500A3.500 3.500 0 0 1 27.500 42h-7a3.500 3.500 0 0 1-3.500-3.500z"/><path d="M19 17c0-3 2.300-5.500 5-5.500" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2.500" stroke-linecap="round"/></symbol>
+    <symbol id="i-signpost" viewBox="0 0 48 48"><path fill="currentColor" d="M22 5h4v40h-4z"/><path fill="currentColor" d="M26 9h14l5 5.500L40 20H26z"/><path style="fill:var(--c2,#faa67a)" d="M22 24H8l-5 5.500L8 35h14z"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 48 48"><path style="fill:var(--c2,#faa67a)" d="M24 8 3 18.500 24 29l21-10.500z"/><path fill="currentColor" d="M12 24.500V32c0 3.300 5.400 6 12 6s12-2.700 12-6v-7.500L24 31z"/><path d="M42 20v12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 48 48"><path fill="currentColor" d="M33 5a11 11 0 0 0-10.500 14.300L6.800 35a4.800 4.800 0 0 0 6.800 6.800L29.200 26A11 11 0 0 0 43 15.500l-6.500 6.500-5.800-1.200-1.200-5.800L36 8.500A11 11 0 0 0 33 5z"/><circle style="fill:var(--c2,#faa67a)" cx="10.200" cy="38.500" r="2.200"/></symbol>
+    <symbol id="i-gears" viewBox="0 0 48 48"><circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="6" stroke-dasharray="5.890 5.890"/><path fill="currentColor" fill-rule="evenodd" d="M24 10.500a13.500 13.500 0 1 0 0 27 13.500 13.500 0 0 0 0-27zm0 8.500a5 5 0 1 1 0 10 5 5 0 0 1 0-10z"/><circle cx="24" cy="24" r="3" style="fill:var(--c2,#faa67a)"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 48 48"><path style="fill:var(--c2,#faa67a)" d="M24 44 10 22C9 14 15 8 24 3c9 5 15 11 14 19z"/><path d="M24 26v18" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="21" r="4" fill="currentColor"/></symbol>
+    <symbol id="i-live" viewBox="0 0 48 48"><rect x="3" y="10" width="30" height="28" rx="7" fill="currentColor"/><path style="fill:var(--c2,#faa67a)" d="m37 21 8-5.500c.7-.5 1.700 0 1.700.9v15.200c0 .9-1 1.400-1.700.9L37 27z"/><circle cx="12" cy="19" r="2.500" fill="#fff" fill-opacity=".85"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 48 48"><path style="fill:var(--c2,#faa67a)" d="M8 14 32 6v8z"/><rect x="4" y="13" width="40" height="29" rx="7" fill="currentColor"/><path d="M44 24h-9a5 5 0 0 0 0 10h9z" fill="#fff" fill-opacity=".45"/><circle cx="36" cy="29" r="2" fill="#fff"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" style="fill:var(--c2,#faa67a)"/><circle cx="24" cy="24" r="13" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="3"/><path fill="#fff" d="m24 17 2.200 4.800 5.200.6-3.900 3.500 1.100 5.100L24 28.500l-4.600 2.500 1.100-5.100-3.900-3.500 5.200-.6z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 48 48"><path fill="currentColor" d="M8 6h22a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H18l-7 6v-6H8a6 6 0 0 1-6-6V12a6 6 0 0 1 6-6z"/><path style="fill:var(--c2,#faa67a)" d="M20 22h20a6 6 0 0 1 6 6v8a6 6 0 0 1-6 6h-2v5l-6-5H26a6 6 0 0 1-6-6z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" fill="currentColor"/><path d="M24 13v11l7 4.500" fill="none" stroke="#fff" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.500" style="fill:var(--c2,#faa67a)"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 48 48"><path fill="currentColor" d="M20 4c1 11 6 17 17 18-11 1-16 7-17 18-1-11-6-17-17-18C14 21 19 15 20 4z"/><path style="fill:var(--c2,#faa67a)" d="M38 26c.5 5 3 7.500 8 8-5 .5-7.500 3-8 8-.5-5-3-7.500-8-8 5-.5 7.500-3 8-8z"/></symbol>
+    <symbol id="i-refund" viewBox="0 0 48 48"><path d="M40 24a16 16 0 1 1-5-11.600" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><path style="fill:var(--c2,#faa67a)" d="M42 5v13H29z"/><circle cx="24" cy="24" r="4" style="fill:var(--c2,#faa67a)"/></symbol>
+    <symbol id="i-archive" viewBox="0 0 48 48"><rect x="4" y="8" width="40" height="11" rx="4" style="fill:var(--c2,#faa67a)"/><path fill="currentColor" d="M7 21h34v16a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5z"/><path d="M19 29h10" stroke="#fff" stroke-width="3.500" stroke-linecap="round"/></symbol>
+    <symbol id="i-user" viewBox="0 0 48 48"><path fill="currentColor" d="M24 4a8 8 0 0 0-8 8c0 3.100 1.800 5.800 4.400 7.100C13.4 20.4 8 26.5 8 34h32c0-7.500-5.4-13.6-6.4-14.9C38.2 17.8 40 15.1 40 12a8 8 0 0 0-8-8z"/><path style="fill:var(--c2,#faa67a)" d="M12 36q6-5 12-5t12 5"/></symbol>
+
+    <!-- UI icons -->
+    <symbol id="u-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-back" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-down" viewBox="0 0 24 24"><path d="M12 5v14m-6-6 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-check" viewBox="0 0 24 24"><path d="m5 12.500 4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-play" viewBox="0 0 24 24"><path d="M8 5.500v13l11-6.500z" fill="currentColor"/></symbol>
+    <symbol id="u-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.800 13.500L3 21l4.600-1.200A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linejoin="round"/><path d="M9 8.500c0 3.500 3 6.500 6.500 6.500l1-1.600-2-1-.9.800c-1-.4-1.800-1.200-2.200-2.200l.8-.9-1-2z" fill="currentColor"/></symbol>
+    <symbol id="u-mail" viewBox="0 0 24 24"><rect x="3" y="5.500" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="1.800"/><path d="m4 8 8 5.500L20 8" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-fb" viewBox="0 0 24 24"><path d="M14 8h2.500V4.500H14A4 4 0 0 0 10 8.500V11H7.500v3.500H10V21h3.500v-6.500H16l.5-3.500h-3V8.700c0-.4.300-.7.700-.7z" fill="currentColor"/></symbol>
+    <symbol id="u-ig" viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.800"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.800"/><circle cx="17" cy="7" r="1.100" fill="currentColor"/></symbol>
+    <symbol id="u-x" viewBox="0 0 24 24"><path d="M5 4.500h3.500l10.500 15H15.500zM18.500 4.500 12.600 11.200M5.500 19.500l5.900-6.700" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-in" viewBox="0 0 24 24"><path d="M6.500 10v8M6.500 6.500v.01M10.500 18v-8m0 3.500c0-2 1.500-3.500 3.200-3.500S17 11.500 17 13.500V18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="u-yt" viewBox="0 0 24 24"><rect x="2.500" y="5.500" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="1.800"/><path d="m10 9.500 5 2.500-5 2.500z" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ───────────── Navigation ───────────── -->
+<header class="nav" data-nav>
+  <div class="nav__inner">
+    <div class="nav__bar material">
+      <a class="brand" href="#top" aria-label="KMZee IAMAcademy — home">
+        <svg class="brand__mark" aria-hidden="true"><use href="#logo"/></svg>
+        <span class="brand__name">KMZee <b>IAMAcademy</b></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#hub">Skill Boost Hub</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#knowledge">Lessons</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn--dark btn--sm nav__cta" href="#book" data-press>Book a session</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu" data-press>
+        <span></span><span></span>
+      </button>
+    </div>
+
+    <div class="menu material" id="menu">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#hub">Skill Boost Hub</a>
+      <a href="#tracks">Tracks</a>
+      <a href="#knowledge">Lessons</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--dark" href="#book" data-press>Book a session</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────── Hero ───────────── -->
+<section class="hero" id="hero" data-hero>
+  <div class="hero__bg" aria-hidden="true"></div>
+
+  <div class="chips" aria-hidden="true">
+    <div class="chip" data-depth="1.1" style="--x:10%;--y:27%;--s:84px;--mx:15%;--my:15%;--ms:48px"><div class="chip__float"><div class="chip__body material"><svg class="ico" style="color:var(--cyan)"><use href="#i-code"/></svg></div></div></div>
+    <div class="chip" data-depth="1.5" style="--x:90%;--y:25%;--s:92px;--mx:85%;--my:15%;--ms:52px"><div class="chip__float"><div class="chip__body material"><svg class="ico" style="color:var(--cyan)"><use href="#i-bulb"/></svg></div></div></div>
+    <div class="chip" data-depth="0.8" style="--x:4.5%;--y:61%;--s:78px;--mx:10%;--my:90%;--ms:46px"><div class="chip__float"><div class="chip__body material"><svg class="ico" style="color:var(--cyan)"><use href="#i-signpost"/></svg></div></div></div>
+    <div class="chip" data-depth="1.3" style="--x:95.5%;--y:63%;--s:82px;--mx:90%;--my:91%;--ms:48px"><div class="chip__float"><div class="chip__body material"><svg class="ico" style="color:var(--cyan)"><use href="#i-cap"/></svg></div></div></div>
+    <div class="chip chip--desk" data-depth="0.9" style="--x:78%;--y:15%;--s:62px"><div class="chip__float"><div class="chip__body material"><svg class="ico" style="color:var(--cyan)"><use href="#i-wrench"/></svg></div></div></div>
+    <div class="chip" data-depth="0.7" style="--x:19%;--y:85%;--s:66px;--mx:31%;--my:93%;--ms:40px"><div class="chip__float"><div class="chip__body material"><svg class="ico" style="color:var(--cyan)"><use href="#i-gears"/></svg></div></div></div>
+    <div class="chip" data-depth="1.0" style="--x:81%;--y:84%;--s:70px;--mx:70%;--my:93%;--ms:44px"><div class="chip__float"><div class="chip__body material"><svg class="ico" style="color:var(--cyan)"><use href="#i-pen"/></svg></div></div></div>
+    <div class="chip chip--desk" data-depth="1.2" style="--x:25%;--y:14%;--s:72px"><div class="chip__float"><div class="chip__body chip__ar material"><span lang="ar" dir="rtl">تعلّم</span></div></div></div>
+  </div>
+
+  <div class="hero__inner">
+    <p class="pill" data-reveal style="--d:.05s"><span class="pill__dot"></span>An online academy under KMZee Holding</p>
+    <h1 class="display">
+      <span class="w" style="--i:0">Your</span>
+      <span class="w" style="--i:1">skills</span>
+      <span class="w" style="--i:2">define</span>
+      <span class="w" style="--i:3">your</span>
+      <span class="w grad" style="--i:4">path.</span>
+    </h1>
+    <p class="lead hero__lead" data-reveal style="--d:.45s">
+      A customised learning path built around what you can do — not outdated prerequisites. Learn one-to-one with a real coach, whenever you choose.
+    </p>
+    <div class="hero__cta" data-reveal style="--d:.6s">
+      <a class="btn btn--dark btn--lg" href="#book" data-press>Book a session</a>
+      <a class="btn btn--glass btn--lg" href="#about" data-press>Learn more <svg class="btn__ico" aria-hidden="true"><use href="#u-arrow"/></svg></a>
+    </div>
+
+    <div class="hero__stats" data-reveal style="--d:.8s">
+      <div class="stat"><b class="stat__n" data-count="1200">0</b><span class="stat__label">Learners guided</span></div>
+      <div class="stat"><b class="stat__n" data-count="85">0</b><span class="stat__label">Coaches</span></div>
+      <div class="stat"><b class="stat__n" data-count="4.9">0</b><span class="stat__label">Avg. rating</span></div>
+      <div class="stat"><b class="stat__n" data-count="15">0</b><span class="stat__label">Skills covered</span></div>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#about" aria-label="Scroll to next section"><span></span></a>
+</section>
+
+<!-- ───────────── Statement ───────────── -->
+<section class="statement" id="about">
+  <div class="container container--narrow">
+    <p class="statement__text" data-scrub>Welcome to KMZee IAMAcademy — the online academy under KMZee Holding that breaks the norms of traditional education. <em>Here, your skills define your path,</em> not outdated prerequisites.</p>
+  </div>
+</section>
+
+<!-- ───────────── Stats strip ───────────── -->
+<section class="strip" id="stats">
+  <div class="container container--narrow">
+    <div class="strip__row">
+      <div class="strip__item">
+        <div class="strip__icon-wrap">
+          <svg class="strip__icon" aria-hidden="true"><use href="#i-live"/></svg>
+        </div>
+        <strong>1:1 live sessions</strong>
+        <span>Real-time coaching, not pre-recorded videos</span>
+      </div>
+      <div class="strip__item">
+        <div class="strip__icon-wrap">
+          <svg class="strip__icon" aria-hidden="true"><use href="#i-wallet"/></svg>
+        </div>
+        <strong>Pay as you go</strong>
+        <span>Direct from your virtual wallet, no course bundles</span>
+      </div>
+      <div class="strip__item">
+        <div class="strip__icon-wrap">
+          <svg class="strip__icon" aria-hidden="true"><use href="#i-refund"/></svg>
+        </div>
+        <strong>Refundable deposit</strong>
+        <span>Hassle-free wallet refunds for peace of mind</span>
+      </div>
+      <div class="strip__item">
+        <div class="strip__icon-wrap">
+          <svg class="strip__icon" aria-hidden="true"><use href="#i-archive"/></svg>
+        </div>
+        <strong>Free knowledge archives</strong>
+        <span>Access our growing library of lessons at no cost</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Path builder ───────────── -->
+<section class="sec" id="path">
+  <div class="container path">
+    <div class="path__intro">
+      <p class="eyebrow" data-reveal>Start here</p>
+      <h2 class="h2" data-reveal style="--d:.05s">What are you curious about?</h2>
+      <p class="lead" data-reveal style="--d:.1s">Pick the skills you'd like to grow. We'll sketch your path — then a real person helps you walk it.</p>
+
+      <div class="skills" data-skills data-reveal style="--d:.15s" role="group" aria-label="Skills you're curious about"></div>
+      <p class="hint" data-reveal style="--d:.2s">Don't see yours? Tell us in the booking form below.</p>
+    </div>
+
+    <div class="route material" data-route data-reveal style="--d:.1s">
+      <div class="route__line" aria-hidden="true"><i data-route-fill></i></div>
+
+      <ol class="route__steps">
+        <li class="step is-on" data-step="1">
+          <span class="step__node"><svg aria-hidden="true"><use href="#i-signpost"/></svg></span>
+          <div>
+            <p class="step__tag">Step 1 · Free to start</p>
+            <h3 class="step__title">Educational Consultation</h3>
+            <p class="step__text">A voluntary chat to discover your unique skills and grow confident in them. A custom learning path is suggested afterwards.</p>
+          </div>
+        </li>
+        <li class="step" data-step="2">
+          <span class="step__node"><svg aria-hidden="true"><use href="#i-gears"/></svg></span>
+          <div>
+            <p class="step__tag">Step 2 · Your custom path</p>
+            <h3 class="step__title">Skill Enhancement</h3>
+            <p class="step__text" data-path-text>Pick a skill on the left and your path appears here.</p>
+            <div class="step__tags" data-path-tags aria-live="polite"></div>
+          </div>
+        </li>
+        <li class="step" data-step="3">
+          <span class="step__node"><svg aria-hidden="true"><use href="#i-live"/></svg></span>
+          <div>
+            <p class="step__tag">Step 3 · Learn live</p>
+            <h3 class="step__title">1:1 sessions with a coach</h3>
+            <p class="step__text">Book on-demand live sessions, practise in real time and pay only for the time you book.</p>
+          </div>
+        </li>
+      </ol>
+
+      <a class="btn btn--dark route__cta" href="#book" data-press data-to-book>Book a session with this path <svg class="btn__ico" aria-hidden="true"><use href="#u-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Services ───────────── -->
+<section class="sec sec--tint" id="services">
+  <div class="container">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow" data-reveal>Services</p>
+      <h2 class="h2" data-reveal style="--d:.05s">Three ways to begin.</h2>
+      <p class="lead" data-reveal style="--d:.1s">There is always something beyond your knowledge and wisdom. Start wherever you are.</p>
+    </header>
+
+    <div class="svc-grid">
+      <article class="svc spot" data-reveal data-press style="--d:.05s">
+        <div class="svc__art"><svg class="ico" style="color:var(--cyan)"><use href="#i-signpost"/></svg></div>
+        <p class="svc__n">01</p>
+        <h3 class="h3">Educational Consultation</h3>
+        <p>A voluntary service for all youngsters to learn about themselves and feel confident and strong about their own unique skills. A custom learning path is then suggested and recommended.</p>
+        <a class="link" href="#book" data-service="Educational Consultation">Connect now <svg aria-hidden="true"><use href="#u-arrow"/></svg></a>
+      </article>
+
+      <article class="svc spot" data-reveal data-press style="--d:.12s">
+        <div class="svc__art"><svg class="ico" style="color:var(--cyan)"><use href="#i-gears"/></svg></div>
+        <p class="svc__n">02</p>
+        <h3 class="h3">Skill Enhancement</h3>
+        <p>An optional yet recommended plan after consultation, where you pave your own custom learning path to improve your skills and win your life's struggles with ease.</p>
+        <a class="link" href="#book" data-service="Skill Enhancement">Book now <svg aria-hidden="true"><use href="#u-arrow"/></svg></a>
+      </article>
+
+      <article class="svc spot" data-reveal data-press style="--d:.19s">
+        <div class="svc__art"><svg class="ico" style="color:var(--cyan)"><use href="#i-cap"/></svg></div>
+        <p class="svc__n">03</p>
+        <h3 class="h3">Career Consultation</h3>
+        <p>For all individuals — graduates and non-graduates — to review and redefine themselves based on their own unique skills. <span class="muted">May or may not include career or business support.</span></p>
+        <a class="link" href="#book" data-service="Career Consultation">Connect now <svg aria-hidden="true"><use href="#u-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Skill Boost Hub (bento) ───────────── -->
+<section class="sec sec--dark" id="hub">
+  <div class="container">
+    <header class="sec-head">
+      <p class="eyebrow eyebrow--light" data-reveal>Skill Boost Hub</p>
+      <h2 class="h2" data-reveal style="--d:.05s">A learning experience that's uniquely yours.</h2>
+      <p class="lead lead--light" data-reveal style="--d:.1s">Unlock your potential with live, flexible, human learning — no rigid courses, no rush.</p>
+    </header>
+
+    <div class="bento">
+      <article class="tile tile--live spot" data-reveal data-press>
+        <div class="tile__copy">
+          <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-live"/></svg>
+          <h3 class="h3">Live Sessions</h3>
+          <p>Book on-demand live sessions. You experiment and become a pro in your chosen skill under the real-time guidance of your coach.</p>
+        </div>
+        <div class="session" aria-hidden="true">
+          <div class="session__bar"><i></i><i></i><i></i><span class="session__live"><b></b>LIVE</span></div>
+          <div class="session__body">
+            <div class="session__people"><span class="av av--c">C</span><span class="av av--y">You</span></div>
+            <div class="session__code"><i style="--w:62%"></i><i style="--w:84%"></i><i style="--w:48%"></i><i style="--w:72%"></i><i style="--w:36%"></i></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile spot" data-reveal data-press style="--d:.05s">
+        <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-wallet"/></svg>
+        <h3 class="h3">Pay as you go</h3>
+        <p>Trainees pay as they learn, straight from their virtual wallets.</p>
+      </article>
+
+      <article class="tile spot" data-reveal data-press style="--d:.1s">
+        <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-coin"/></svg>
+        <h3 class="h3">Earn as you go</h3>
+        <p>Coaches earn while mentoring in live sessions.</p>
+      </article>
+
+      <article class="tile tile--wide spot" data-reveal data-press style="--d:.05s">
+        <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-refund"/></svg>
+        <h3 class="h3">Refundable deposit</h3>
+        <p>Easy wallet refunds for a hassle-free experience and peace of mind.</p>
+      </article>
+
+      <article class="tile spot" data-reveal data-press style="--d:.05s">
+        <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-clock"/></svg>
+        <h3 class="h3">Flexible learning</h3>
+        <p>No rush. Learn comfortably at your own pace.</p>
+      </article>
+
+      <article class="tile spot" data-reveal data-press style="--d:.1s">
+        <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-chat"/></svg>
+        <h3 class="h3">Knowledge sharing</h3>
+        <p>Exchange ideas and insights freely.</p>
+      </article>
+
+      <article class="tile tile--wide spot" data-reveal data-press style="--d:.15s">
+        <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-spark"/></svg>
+        <h3 class="h3">No boring courses!</h3>
+        <p>Choose what excites you — and learn it with a real person.</p>
+      </article>
+
+      <article class="tile tile--banner spot" data-reveal data-press>
+        <svg class="ico tile__ico" style="color:var(--cyan)"><use href="#i-archive"/></svg>
+        <div class="tile__banner-copy">
+          <h3 class="h3">Knowledge archives</h3>
+          <p>Free access to our growing knowledge database — wisdom and insights, waiting for you.</p>
+        </div>
+        <a class="btn btn--cyan" href="#knowledge" data-press>Browse lessons <svg class="btn__ico" aria-hidden="true"><use href="#u-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Tracks ───────────── -->
+<section class="sec" id="tracks">
+  <div class="container tracks">
+    <header class="sec-head tracks__head">
+      <p class="eyebrow" data-reveal>Tailored learning tracks</p>
+      <h2 class="h2" data-reveal style="--d:.05s">Paths built on your skills.</h2>
+      <p class="lead" data-reveal style="--d:.1s">Explore personalised learning paths based on what you're already good at.</p>
+    </header>
+
+    <ol class="track-list" data-tracks>
+      <li class="track" data-reveal>
+        <span class="track__n">01</span>
+        <h3 class="track__t">Custom Segments</h3>
+        <p class="track__d">Unique paths for individual growth.</p>
+        <svg class="track__a" aria-hidden="true"><use href="#u-arrow"/></svg>
+      </li>
+      <li class="track" data-reveal>
+        <span class="track__n">02</span>
+        <h3 class="track__t">Skill-Centric Approach</h3>
+        <p class="track__d">Focus on your strengths and interests.</p>
+        <svg class="track__a" aria-hidden="true"><use href="#u-arrow"/></svg>
+      </li>
+      <li class="track" data-reveal>
+        <span class="track__n">03</span>
+        <h3 class="track__t">Skill Mastery Zones</h3>
+        <p class="track__d">Master your skills in specialised zones.</p>
+        <svg class="track__a" aria-hidden="true"><use href="#u-arrow"/></svg>
+      </li>
+      <li class="track" data-reveal>
+        <span class="track__n">04</span>
+        <h3 class="track__t">Interactive Sessions</h3>
+        <p class="track__d">Engage in dynamic learning experiences.</p>
+        <svg class="track__a" aria-hidden="true"><use href="#u-arrow"/></svg>
+      </li>
+      <li class="track" data-reveal>
+        <span class="track__n">05</span>
+        <h3 class="track__t">Expert Guidance</h3>
+        <p class="track__d">Receive mentorship from industry experts.</p>
+        <svg class="track__a" aria-hidden="true"><use href="#u-arrow"/></svg>
+      </li>
+      <li class="track" data-reveal>
+        <span class="track__n">06</span>
+        <h3 class="track__t">Real-world Projects</h3>
+        <p class="track__d">Apply your skills in practical, real-time projects.</p>
+        <svg class="track__a" aria-hidden="true"><use href="#u-arrow"/></svg>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ───────────── Knowledge Hub (momentum carousel) ───────────── -->
+<section class="sec sec--tint" id="knowledge">
+  <div class="container">
+    <header class="sec-head sec-head--row">
+      <div>
+        <p class="eyebrow" data-reveal>Knowledge Hub</p>
+        <h2 class="h2" data-reveal style="--d:.05s">Knowledge and wisdom walk side by side.</h2>
+        <p class="lead" data-reveal style="--d:.1s">Free lessons from our coaches. Watch, learn — then book a session to go deeper.</p>
+      </div>
+      <div class="cx__nav" data-reveal style="--d:.15s">
+        <button class="round" type="button" data-cx-prev aria-label="Previous lessons" data-press><svg aria-hidden="true"><use href="#u-back"/></svg></button>
+        <button class="round" type="button" data-cx-next aria-label="Next lessons" data-press><svg aria-hidden="true"><use href="#u-arrow"/></svg></button>
+      </div>
+    </header>
+  </div>
+
+  <div class="cx" data-carousel role="region" aria-roledescription="carousel" aria-label="Free video lessons">
+    <div class="cx__viewport">
+      <div class="cx__track">
+        <a class="vid" draggable="false" href="https://www.youtube.com/watch?v=yTM_riXWYIc" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/yTM_riXWYIc/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Digital Marketing</span>
+          <h3 class="vid__t">SEO Beginners Guide: A Journey into Search Engine Optimization</h3>
+        </a>
+        <a class="vid" draggable="false" href="https://www.youtube.com/watch?v=1wyvAqAKstw" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/1wyvAqAKstw/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Web Development</span>
+          <h3 class="vid__t">User Interface Design for Range Filter Slider using ReactJS</h3>
+        </a>
+        <a class="vid" draggable="false" href="https://www.youtube.com/watch?v=UynQi1xag94&amp;t=21s" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/UynQi1xag94/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Design</span>
+          <h3 class="vid__t">Mockup Tutorial to Place an Image Anywhere with Smart Object and Warp</h3>
+        </a>
+        <a class="vid" draggable="false" href="https://www.youtube.com/watch?v=8NNVpQBeZ4w" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/8NNVpQBeZ4w/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Digital Marketing</span>
+          <h3 class="vid__t">SEO Beginners Guide: A Journey into Search Engine Optimization — Part 2</h3>
+        </a>
+        <a class="vid" draggable="false" href="https://www.youtube.com/watch?v=0HKDDdmx2Y0" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/0HKDDdmx2Y0/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Web Development</span>
+          <h3 class="vid__t">Debouncing using ReactJS</h3>
+        </a>
+        <a class="vid" draggable="false" href="https://youtu.be/06rJWixgUXg" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/06rJWixgUXg/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Operating System</span>
+          <h3 class="vid__t">Use Linux in Windows | No Dual-Boot</h3>
+        </a>
+        <a class="vid" draggable="false" href="https://www.youtube.com/watch?v=JWwHcqIyIvI&amp;t=5s" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/JWwHcqIyIvI/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Backend Development</span>
+          <h3 class="vid__t">Client Server Architecture — The Way Web Behaves</h3>
+        </a>
+        <a class="vid" draggable="false" href="https://youtu.be/H8B8FwpMSLc" target="_blank" rel="noopener">
+          <div class="vid__thumb"><img draggable="false" loading="lazy" alt="" src="https://i.ytimg.com/vi/H8B8FwpMSLc/hqdefault.jpg" onerror="this.remove()"><span class="vid__play"><svg aria-hidden="true"><use href="#u-play"/></svg></span></div>
+          <span class="vid__cat">Web Development</span>
+          <h3 class="vid__t">React useState Hook Tutorial For Beginners</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="cx__more"><a class="link" href="https://www.youtube.com/channel/UCQ6zQyuZoiPKpdlU-MjSbYQ" target="_blank" rel="noopener">See every lesson on YouTube <svg aria-hidden="true"><use href="#u-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ───────────── Testimonials ───────────── -->
+<section class="sec" id="voices">
+  <div class="container">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow" data-reveal>Learner voices</p>
+      <h2 class="h2" data-reveal style="--d:.05s">Learners say it best.</h2>
+    </header>
+
+    <div class="quotes">
+      <figure class="quote material" data-reveal>
+        <svg class="quote__mark" aria-hidden="true" viewBox="0 0 48 36"><path fill="currentColor" d="M0 36V19C0 8 6 1.500 18 0v7c-5 1.200-7.500 4-7.500 8H18v21zm27 0V19C27 8 33 1.500 45 0v7c-5 1.200-7.500 4-7.500 8H45v21z"/></svg>
+        <blockquote>I had a great learning experience in terms of Business Analysis and Database management and development in such programs like PostgreSQL, Excel, Tableau and Power BI. This helped my problem-solving skills elevate and go to the next level.</blockquote>
+        <figcaption><span class="av av--c">L</span><span><b>Lina Al Harthi</b><i>KSA</i></span></figcaption>
+      </figure>
+
+      <figure class="quote material" data-reveal style="--d:.08s">
+        <svg class="quote__mark" aria-hidden="true" viewBox="0 0 48 36"><path fill="currentColor" d="M0 36V19C0 8 6 1.500 18 0v7c-5 1.200-7.500 4-7.500 8H18v21zm27 0V19C27 8 33 1.500 45 0v7c-5 1.200-7.500 4-7.500 8H45v21z"/></svg>
+        <blockquote>The classes were good alhamdulillah, the academy demonstrated flexibility in scheduling. The way and method of teaching was also good. I recommend KMZee Academy.</blockquote>
+        <figcaption><span class="av av--y">R</span><span><b>Rahila Fatima</b><i>IND</i></span></figcaption>
+      </figure>
+
+      <figure class="quote material" data-reveal style="--d:.16s">
+        <svg class="quote__mark" aria-hidden="true" viewBox="0 0 48 36"><path fill="currentColor" d="M0 36V19C0 8 6 1.500 18 0v7c-5 1.200-7.500 4-7.500 8H18v21zm27 0V19C27 8 33 1.500 45 0v7c-5 1.200-7.500 4-7.500 8H45v21z"/></svg>
+        <blockquote>The individualised session format allowed for focused attention, enhancing comprehension and skill development. The practical project component was particularly beneficial.</blockquote>
+        <figcaption><span class="av av--c">A</span><span><b>Ayesha Ahmed</b><i>KSA</i></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── FAQ ───────────── -->
+<section class="sec sec--tint" id="faq">
+  <div class="container faq">
+    <header class="sec-head faq__head">
+      <p class="eyebrow" data-reveal>Curious minds ask</p>
+      <h2 class="h2" data-reveal style="--d:.05s">Frequently asked questions.</h2>
+      <p class="lead" data-reveal style="--d:.1s">Still wondering? <a class="link link--inline" href="#book">Ask us directly</a>.</p>
+    </header>
+
+    <div class="acc" data-acc>
+      <div class="acc__item" data-reveal>
+        <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a1" id="q1" data-press>How does it work?<svg aria-hidden="true"><use href="#u-plus"/></svg></button></h3>
+        <div class="acc__panel" id="a1" role="region" aria-labelledby="q1"><div><p>At KMZee IAMAcademy, you choose what to learn and pay only for the knowledge you seek, within the duration of the session you book. No rigid courses — just pure learning freedom, at your own pace and availability.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a2" id="q2" data-press>Is my deposit refundable?<svg aria-hidden="true"><use href="#u-plus"/></svg></button></h3>
+        <div class="acc__panel" id="a2" role="region" aria-labelledby="q2"><div><p>Yes. We offer an easy refundable deposit system through your wallet, for hassle-free transactions and peace of mind.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a3" id="q3" data-press>What's unique?<svg aria-hidden="true"><use href="#u-plus"/></svg></button></h3>
+        <div class="acc__panel" id="a3" role="region" aria-labelledby="q3"><div><p>Our platform focuses on personalised learning paths based on individual skill sets, not traditional prerequisites. It's all about unleashing your potential.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a4" id="q4" data-press>Any live support?<svg aria-hidden="true"><use href="#u-plus"/></svg></button></h3>
+        <div class="acc__panel" id="a4" role="region" aria-labelledby="q4"><div><p>Absolutely. We provide on-demand 1:1 live sessions for personalised guidance and support whenever you need it.</p></div></div>
+      </div>
+      <div class="acc__item" data-reveal>
+        <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a5" id="q5" data-press>Access to archives?<svg aria-hidden="true"><use href="#u-plus"/></svg></button></h3>
+        <div class="acc__panel" id="a5" role="region" aria-labelledby="q5"><div><p>Explore a treasure trove of free knowledge archives on our platform, where wisdom and insights await your discovery.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Booking ───────────── -->
+<section class="sec sec--book" id="book">
+  <div class="container">
+    <div class="book">
+      <div class="book__copy">
+        <p class="eyebrow eyebrow--light" data-reveal>Book a session</p>
+        <h2 class="h2" data-reveal style="--d:.05s">Ready to find your path?</h2>
+        <p class="lead lead--light" data-reveal style="--d:.1s">Tell us what you'd like to learn. We'll reply on WhatsApp and help you take the first step.</p>
+
+        <ul class="contact" data-reveal style="--d:.15s">
+          <li><a href="https://wa.me/918977912857" target="_blank" rel="noopener"><span class="contact__ico"><svg aria-hidden="true"><use href="#u-wa"/></svg></span><span><i>WhatsApp</i>+91 89779 12857</span></a></li>
+          <li><a href="mailto:support@kmzee.academy"><span class="contact__ico"><svg aria-hidden="true"><use href="#u-mail"/></svg></span><span><i>Email</i>support@kmzee.academy</span></a></li>
+        </ul>
+      </div>
+
+      <form class="form material" id="bookForm" novalidate data-reveal style="--d:.1s">
+        <div class="form__body">
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="e.g. Ayesha" required>
+            <p class="field__err" data-err="name">Please tell us your name.</p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-contact">WhatsApp or email</label>
+              <input id="f-contact" name="contact" type="text" autocomplete="email" placeholder="+91… or you@email.com" required>
+              <p class="field__err" data-err="contact">Add a WhatsApp number or email so we can reply.</p>
+            </div>
+            <div class="field">
+              <label for="f-service">I'm looking for</label>
+              <select id="f-service" name="service">
+                <option>Not sure yet</option>
+                <option>Educational Consultation</option>
+                <option>Skill Enhancement</option>
+                <option>Career Consultation</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label id="f-skills-l">Skills you're curious about</label>
+            <div class="skills skills--sm" data-skills role="group" aria-labelledby="f-skills-l"></div>
+          </div>
+
+          <div class="field">
+            <label for="f-msg">Anything else? <span class="opt">(optional)</span></label>
+            <textarea id="f-msg" name="message" rows="3" placeholder="Your goals, preferred timings, anything that helps…"></textarea>
+          </div>
+
+          <button class="btn btn--dark btn--lg form__submit" type="submit" data-press>
+            <svg class="btn__ico" aria-hidden="true"><use href="#u-wa"/></svg> Send on WhatsApp
+          </button>
+          <p class="form__note">This opens WhatsApp with your message ready to send. Prefer email? <a class="link link--inline" href="#" data-mailto>Send by email instead</a>.</p>
+        </div>
+
+        <div class="form__done" aria-live="polite" hidden>
+          <span class="done__check"><svg aria-hidden="true"><use href="#u-check"/></svg></span>
+          <h3 class="h3">Almost there!</h3>
+          <p>We've opened WhatsApp with your message. Just press send there and we'll get back to you.</p>
+          <p class="muted">Didn't open? <a class="link link--inline" href="#" data-wa-again target="_blank" rel="noopener">Open WhatsApp</a> · <a class="link link--inline" href="#" data-mailto>Send by email</a></p>
+          <button class="btn btn--glass" type="button" data-reset data-press>Send another</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Closing banner ───────────── -->
+<section class="closing" aria-label="Our belief">
+  <div class="banner" data-reveal>
+    <p>There is always something beyond your knowledge and wisdom.</p>
+    <svg class="banner__nib" aria-hidden="true" style="color:var(--cyan);--c2:var(--peach)"><use href="#i-pen"/></svg>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────────── Footer ───────────── -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand" href="#top" aria-label="KMZee IAMAcademy — back to top">
+        <svg class="brand__mark" aria-hidden="true"><use href="#logo"/></svg>
+        <span class="brand__name">KMZee <b>IAMAcademy</b></span>
+      </a>
+      <p>An online academy under KMZee Holding, breaking the norms of traditional education — one skill at a time.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Explore">
+      <h4>Explore</h4>
+      <a href="#path">Your path</a>
+      <a href="#services">Services</a>
+      <a href="#hub">Skill Boost Hub</a>
+      <a href="#knowledge">Lessons</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="footer__col">
+      <h4>Connect</h4>
+      <div class="social">
+        <a href="https://www.facebook.com/kmzee.iamacademy" target="_blank" rel="noopener" aria-label="Facebook" data-press><svg aria-hidden="true"><use href="#u-fb"/></svg></a>
+        <a href="https://www.instagram.com/kmzee.iamacademy" target="_blank" rel="noopener" aria-label="Instagram" data-press><svg aria-hidden="true"><use href="#u-ig"/></svg></a>
+        <a href="https://twitter.com/kmzee_academy" target="_blank" rel="noopener" aria-label="X (Twitter)" data-press><svg aria-hidden="true"><use href="#u-x"/></svg></a>
+        <a href="https://www.linkedin.com/showcase/kmzee-iamacademy" target="_blank" rel="noopener" aria-label="LinkedIn" data-press><svg aria-hidden="true"><use href="#u-in"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCQ6zQyuZoiPKpdlU-MjSbYQ" target="_blank" rel="noopener" aria-label="YouTube" data-press><svg aria-hidden="true"><use href="#u-yt"/></svg></a>
+      </div>
+      <a href="https://wa.me/918977912857" target="_blank" rel="noopener">WhatsApp +91 89779 12857</a>
+      <a href="mailto:support@kmzee.academy">support@kmzee.academy</a>
+    </div>
+  </div>
+
+  <div class="container footer__base">
+    <p>© <span data-year>2026</span> KMZee IAMAcademy. All rights reserved.</p>
+    <p class="footer__rel"><a href="http://kmzeeholding.com" target="_blank" rel="noopener">KMZee Holding</a></p>
+    <p class="footer__rel"><a href="http://kmzee.tech" target="_blank" rel="noopener">KMZee Technology</a></p>
+  </div>
+</footer>
+
+<script src="js/spring.js"></script>
+<script src="js/main.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').catch(function () {});
+  }
+</script>
+</body>
+</html>

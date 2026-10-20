@@ -1,0 +1,24 @@
+{
+  "name": "KMZee IAMAcademy",
+  "short_name": "KMZee",
+  "description": "Your skills define your path — customised learning, 1:1 live coaching, pay as you go.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e6fffe",
+  "theme_color": "#e6fffe",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "69x77",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
